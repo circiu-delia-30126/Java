@@ -18,7 +18,7 @@ public class AquariumController {
     private pHControl pH;
 
     public AquariumController(String manufacturer, String model) {
-        FishFeeder feeder1 = new FishFeeder("Xeni", "45", 4);
+        FishFeeder feeder1 = new FishFeeder("Xeny", "45", 4);
         LevelSensor level1 = new LevelSensor("Afan", "S90", "l");
         TemperatureSensor t1 = new TemperatureSensor("Peso", "iL3", "C");
         Actuator alarm = new Actuator("Pluma", "123");
@@ -59,7 +59,7 @@ public class AquariumController {
     public boolean checkWaterLevel() {
         if (lvlSensor.getValue() < presetLevel) {
             alarm.turnOn();
-            System.out.println("The alarm is on!");
+            System.out.println(" The alarm is on! ");
         }
         return alarm.getIsOn();
     }
